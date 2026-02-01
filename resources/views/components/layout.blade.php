@@ -15,8 +15,16 @@
     <header>
         <nav>
             <h1>Notes</h1>
-            <a href='{{ route("notes.index")  }}' class='btn'>See all notes here.</a>
-            <a href='{{ route('notes.create')  }}' class='btn'>Create new note.</a>
+            <a href='{{ route("notes.index")  }}' class='btn'>See all notes here</a>
+            <a href='{{ route('notes.create')  }}' class='btn'>Create new note</a>
+
+            <div>
+                <form action='{{ route('logout') }}' method="POST">
+                    @csrf
+
+                    <button type='submit' class='btn'>Logout</button>
+                </form>
+            </div>
         </nav>
     </header>
 

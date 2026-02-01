@@ -12,12 +12,6 @@
         @endforeach
 
         {{ $notes->links() }}
-
-
-        <li>
-            <livewire:note-list></livewire:note-list>
-        </li>
-
     </ul>
 
 </x-layout>
