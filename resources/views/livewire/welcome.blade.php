@@ -9,7 +9,7 @@
 </head>
 <body class="text-center px-8, py-12">
 <div>
-    <h2>Please register or login to manage your notes</h2>
+    <h2>Please login to manage your notes</h2>
 
     <a href='{{ route('login') }}' class="btn mt4 inline-block">Login</a>
 

@@ -4,7 +4,12 @@
         <p>{{ $note->content }}</p>
     </div>
 
+    <div class='bg-gray-200 rounded my-4 p-4'>
+        Created at {{ $note->created_at }}
+    </div>
+
     <div>
+        <a href='{{ route('notes.edit', $note) }}' class="btn mt4 inline-block">Edit</a>
         <form action='{{ route("notes.destroy", $note->id)  }}' method="POST">
             @csrf
             @method('DELETE')
