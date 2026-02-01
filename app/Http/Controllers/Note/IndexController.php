@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
     public function index(): View
     {
-        $notes = Note::orderBy('created_at', 'desc')->paginate(10);
+        $notes = Note::where('user_id', auth()->id())->orderBy('created_at', 'desc')->paginate(10);
 
         return view(
             'notes.index',

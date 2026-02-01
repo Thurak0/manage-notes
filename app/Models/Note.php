@@ -12,8 +12,16 @@ class Note extends Model
         'title',
         'content',
         'important',
+        'user_id',
     ];
 
     /** @use HasFactory<NoteFactory> */
     use HasFactory;
+
+    protected static function booted(): void
+    {
+        static::creating(function ($model) {
+            $model->user_id = auth()->id();
+        });
+    }
 }

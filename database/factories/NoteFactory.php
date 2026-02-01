@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Note>
@@ -20,6 +22,7 @@ class NoteFactory extends Factory
             'title' => $this->faker->sentence(5),
             'content' => $this->faker->paragraph(5),
             'important' => $this->faker->boolean(),
+            'user_id' => User::inRandomOrder()->first()->id,
         ];
     }
 }

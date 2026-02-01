@@ -18,6 +18,6 @@ class Logout
         Session::invalidate();
         Session::regenerateToken();
 
-        return redirect('/')->with('success', 'You have been successfully logged out.');
+        return redirect('/');
     }
 }

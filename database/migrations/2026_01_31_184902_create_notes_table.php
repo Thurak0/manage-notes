@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('content')->nullable();
             $table->boolean('important')->default(false);
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
         });
     }
 

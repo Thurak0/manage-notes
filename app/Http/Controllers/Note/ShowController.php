@@ -10,6 +10,10 @@ class ShowController extends Controller
 {
     public function show(Note $note): View
     {
+        if ($note->user_id !== auth()->id()) {
+            abort(403);
+        }
+
         return view('notes.show', ['note' => $note]);
     }
 }
