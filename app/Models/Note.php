@@ -21,7 +21,9 @@ class Note extends Model
     protected static function booted(): void
     {
         static::creating(function ($model) {
-            $model->user_id = auth()->id();
+            if (empty($model->user_id)) {
+                $model->user_id = auth()->id();
+            }
         });
     }
 }
