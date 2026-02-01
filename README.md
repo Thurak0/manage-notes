@@ -13,5 +13,5 @@ Installation:
   * `php artisan migrate --seed` sollte Daten für den Testuser anlegen. (test@example.com mit Laravel-Standard-Passwort)
   * `npm install && npm run build`
   * `composer run dev`
-* Jetzt sollte die App hoffentlich unter localhost:8ß00 erreichbar sein.
+* Jetzt sollte die App hoffentlich unter localhost:8000 erreichbar sein.
 
